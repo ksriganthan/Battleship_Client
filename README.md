@@ -1,4 +1,4 @@
-#  Battleship Client
+#  Battleship Client (Deutsch)
 
 Eine Android-App für das klassische Schiffe-Versenken-Spiel, entwickelt mit Kotlin und Jetpack Compose.
 
@@ -84,7 +84,7 @@ Die App kommuniziert mit folgenden Endpunkten:
 - Francesco Leone
 
 
-# Battleship Client
+# Battleship Client (English)
 
 An Android app for the classic Battleship game, developed with Kotlin and Jetpack Compose.
 
