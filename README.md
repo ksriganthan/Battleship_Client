@@ -82,3 +82,89 @@ Die App kommuniziert mit folgenden Endpunkten:
 - Kapischan Sriganthan
 - Loic Bösch
 - Francesco Leone
+
+
+# Battleship Client
+
+An Android app for the classic Battleship game, developed with Kotlin and Jetpack Compose.
+
+## Features
+
+- **Multiplayer Support**: Join a game with a Game-Key
+- **Three Main Screens**:
+  - **Login**: Player registration and game joining
+  - **Attack**: Shoot at the opponent's board
+  - **Query**: View enemy attacks on your board
+
+## Technology Stack
+
+- **Language**: Kotlin
+- **UI Framework**: Jetpack Compose with Material Design 3
+- **Navigation**: Jetpack Navigation Component
+- **Architecture**: MVVM with ViewModel
+- **Network**: REST API communication via HTTP
+
+## Gameplay
+
+1. **Login**: Enter your player name and Game-Key
+2. **Place Ships**: The app automatically places 5 ships:
+   - Carrier (5 cells)
+   - Battleship (4 cells)
+   - Submarine (3 cells)
+   - Destroyer (3 cells)
+   - PatrolBoat (2 cells)
+3. **Attack**: Select coordinates on the opponent's board
+4. **Defend**: Check where the opponent has fired
+
+## Project Structure
+
+```
+app/src/main/java/ch/kapischan_sriganthan/battleship_client/
+├── MainActivity.kt          # Main activity with navigation
+├── LoginScreen.kt          # Login screen
+├── FireScreen.kt           # Attack screen
+├── EnemyScreen.kt          # Defense screen
+├── GameViewModel.kt        # State management
+├── APIFunctions.kt         # Server communication
+├── Ship.kt                 # Ship data model
+├── Screen.kt               # Navigation definition
+└── ui/theme/               # Material Design Theme
+```
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/ksriganthan/Battleship_Client.git
+```
+
+2. Open the project in Android Studio
+
+3. Make sure you are using at least API Level 24 (Android 7.0)
+
+4. Build and run the app on an emulator or physical device
+
+## API Endpoints
+
+The app communicates with the following endpoints:
+- `POST /game/join` - Join game
+- `POST /game/fire` - Fire shot
+- `POST /game/enemyFire` - Retrieve enemy shots
+
+## Permissions
+
+- `INTERNET`: For communication with the game server
+- `usesCleartextTraffic`: Allows HTTP connections
+
+## UI Design
+
+- Material Design 3
+- Dynamic Color Support (Android 12+)
+- Dark Mode Support
+- Responsive Grid Layout for game boards
+
+## Developers
+
+- Kapischan Sriganthan
+- Loic Bösch
+- Francesco Leone
